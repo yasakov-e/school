@@ -1,15 +1,9 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
 
 default: &default
   adapter: postgresql
   enconding: unicode
-  username: eugene
-  password:
+  username: school_app
+  password: 12345678
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
