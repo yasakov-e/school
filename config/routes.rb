@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   root to: 'articles#index'
+  devise_for :users
   resources :articles, only: [:index, :show]
-  #get 'articles/index'
-  #get 'articles/show'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end

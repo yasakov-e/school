@@ -12,7 +12,11 @@
 
   Create user: `CREATE USER school_app WITH PASSWORD '12345678';`
 
+<<<<<<< HEAD
   Grant all privileges: `ALTER USER school_app WITH SUPERUSER;`
+=======
+  Grant all privileges: `ALTER USER school_app WITH SUPERUSER`
+>>>>>>> f5696eefd4e6fe227699610639a75f661538f041
 
   `\q` and `exit` to exit
 
