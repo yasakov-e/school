@@ -1,4 +1,11 @@
 ua:
+  school: 'Школа'
+  home: 'Домашня сторінка'
+  courses: 'Курси'
+  hometasks: 'Домашні завдання'
+  group: 'Клас'
+  teachers: 'Вчителі'
+  about_us: 'Про нас'
   news: 'Новини'
   topic: 'Розділ'
   summary: 'Коротко'
