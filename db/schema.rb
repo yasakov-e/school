@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180710130033) do
+ActiveRecord::Schema.define(version: 20180711151443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(version: 20180710130033) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["number", "parallel"], name: "index_groups_on_number_and_parallel", unique: true
+  end
+
+  create_table "lessons", force: :cascade do |t|
+    t.string "topic", default: "", null: false
+    t.text "description", default: "", null: false
+    t.text "links", default: "", null: false
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subjects", force: :cascade do |t|
