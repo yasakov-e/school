@@ -24,10 +24,10 @@ class User < ApplicationRecord
   end
 
   def inactive_message
-    unless approved?
-      :not_approved
-    else
+    if approved?
       super
+    else
+      :not_approved
     end
   end
 end
