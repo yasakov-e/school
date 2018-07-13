@@ -110,4 +110,9 @@ RSpec.describe Achievement, type: :model do
     achievement
     expect(user.achievements.first).to eq achievement
   end
+
+  it 'is not valid if user role is not student' do
+    user_params[:role] = :mentor
+    expect(achievement).not_to be_valid
+  end
 end
