@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Achievement < ApplicationRecord
-
+  belongs_to :user, -> { User.student }
   POINTS_RANGE = 1..12
   POINTS_LENGTH_RANGE   = 1..2
 
