@@ -2,6 +2,7 @@
 
 class Achievement < ApplicationRecord
   belongs_to :user, -> { User.student }
+  belongs_to :lesson
   POINTS_RANGE = 1..12
   POINTS_LENGTH_RANGE   = 1..2
 
