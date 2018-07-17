@@ -49,8 +49,8 @@ ua:
         one:  Курс
         other: Курси
       group:
-        one:  Група
-        other: Групи
+        one:  Клас
+        other: Класи
       hometask: Завдання
       lesson:
         one:  Урок
@@ -313,7 +313,7 @@ ua:
       x_seconds:
         one: 1 секунда
       other: "%{count} секунд"
-  # rails_admin locale  
+  # rails_admin locale
   admin:
     js:
       true: 'True'
@@ -464,4 +464,4 @@ ua:
         default_col_sep: ","
         col_sep: "Роздільник стовпців"
         col_sep_help: "Залишити пустим по замовчуванню ('%{value}')" # value is default_col_sep
-# end rails_admin locale      
+# end rails_admin locale
