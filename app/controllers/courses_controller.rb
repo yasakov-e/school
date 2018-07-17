@@ -3,7 +3,7 @@
 class CoursesController < ApplicationController
   def index
     if current_user.student?
-      @courses = Course.where(group_id: current_user.group_id).includes(:subject)
+      @courses = Course.groups_for_user(current_user).includes(:subject)
       render 'index'
     elsif current_user.teacher?
       @courses = current_user.courses.includes(:group)
