@@ -8,8 +8,4 @@ class Course < ApplicationRecord
   validates :group_id, :subject_id, :user_id, presence: true
 
   has_many :themes, dependent: :destroy
-
-  def self.groups_for_user(user)
-    Course.where(group_id: user.group_id)
-  end
 end
