@@ -4,7 +4,7 @@ FactoryBot.define do
   factory :subject do
     factory :valid_subject do
       name 'asd_as'
-      image 'Bar'
+      image 'subjects/algebra.png'
     end
   end
 end
