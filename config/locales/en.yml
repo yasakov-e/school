@@ -95,6 +95,7 @@ en:
         displayed: Displayed
         group: Group
         subject: Subject
+        user: Teacher
         created_at: Created at
         updated_at: Updated at
       group:
