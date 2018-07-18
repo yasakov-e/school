@@ -102,6 +102,7 @@ ua:
         displayed: Показати
         group: Група
         subject: Предмет
+        user: Вчитель
         created_at: Створено
         updated_at: Змінено
       group:
