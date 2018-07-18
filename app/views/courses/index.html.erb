@@ -7,10 +7,7 @@
         <% group.each do |course| %>
         <td class="course-item col-md-3">
           <% if course %>
-          <%= image_tag course.subject.image %> <br>
-          <div class="course-name">
-            <%= t("subjects.#{course.subject.name}") %>
-          </div>
+            <%= render "#{current_user.role}", :course => course %>
           <% end %>
         </td>
         <% end %>
