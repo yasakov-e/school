@@ -51,7 +51,9 @@ ua:
       group:
         one:  Клас
         other: Класи
-      hometask: Завдання
+      hometask:
+        one:  Домашнє завдання
+        other: Домашні завдання
       lesson:
         one:  Урок
         other: Уроки
