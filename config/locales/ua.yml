@@ -13,6 +13,7 @@ ua:
     teachers: 'Вчителі'
     about_us: 'Про нас'
     subjects: 'Предмети'
+    timetable: 'Розклад'
   subjects:
     algebra: 'Алгебра'
     art: 'Художнє мистецтво'
