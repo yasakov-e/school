@@ -84,6 +84,9 @@ en:
       subject:
         one:  subject
         other: Subjects
+      teacher:
+        one: Teacher
+        other: Teachers
       theme:
         one:  Theme
         other: Themes
@@ -131,3 +134,7 @@ en:
       theme:
         topic: Topic
         course: Course
+      user:
+        name: Name
+        surname: Surname
+        email: Email
