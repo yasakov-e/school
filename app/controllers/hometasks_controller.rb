@@ -1,12 +1,10 @@
 # frozen_string_literal: true
 
 class HometasksController < ApplicationController
+  ALLOWED_ROLES = %w[student teacher].freeze
   def index
-    if current_user.student?
-      @hometasks = []
-      current_user.group.courses.each do |course|
-        @hometasks << Hometask.for_course(course).last
-      end
+    if ALLOWED_ROLES.include?(current_user.role)
+      @hometasks = current_user.hometasks
     else
       redirect_to root_path
     end
