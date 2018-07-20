@@ -22,6 +22,7 @@ class User < ApplicationRecord
   validates :name, length: { in: NAME_LENGTH_RANGE }
   validates :surname, length: { in: NAME_LENGTH_RANGE }
   validates :email, length: { in: EMAIL_LENGTH_RANGE }
+  validates :email, uniqueness: true
   validates :approved, inclusion: { in: [true, false] }
   validates :role, inclusion: { in: ROLES }
 
