@@ -18,6 +18,8 @@ class User < ApplicationRecord
   EMAIL_LENGTH_RANGE = 6..40
   ROLES = %w[student curator teacher mentor].freeze
 
+  # validates :group_id, presence: true, if: -> { self.student? }
+
   validates :name, :surname, :email, presence: true
   validates :name, length: { in: NAME_LENGTH_RANGE }
   validates :surname, length: { in: NAME_LENGTH_RANGE }
@@ -27,6 +29,16 @@ class User < ApplicationRecord
   validates :role, inclusion: { in: ROLES }
 
   enum role: ROLES
+
+  def hometasks
+    hometasks = []
+    if student?
+      hometasks = collect(hometasks, group.courses)
+    elsif teacher?
+      hometasks = collect(hometasks, courses)
+    end
+    hometasks
+  end
 
   def active_for_authentication?
     super && approved?
@@ -38,5 +50,14 @@ class User < ApplicationRecord
     else
       :not_approved
     end
+  end
+
+  private
+
+  def collect(hometasks, enumerator)
+    enumerator.each do |course|
+      hometasks << Hometask.for_course(course).last
+    end
+    hometasks
   end
 end
