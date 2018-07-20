@@ -78,6 +78,9 @@ ua:
       user:
         one:  Користувач
         other: Користувачі
+      teacher:
+        one: Вчитель
+        other: Вчителі
     attributes:
       achievement:
         points: Оцінки
