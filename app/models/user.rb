@@ -27,6 +27,16 @@ class User < ApplicationRecord
 
   enum role: ROLES
 
+  def hometasks
+    hometasks = []
+    if student?
+      hometasks = collect(hometasks, group.courses)
+    elsif teacher?
+      hometasks = collect(hometasks, courses)
+    end
+    hometasks
+  end
+
   def active_for_authentication?
     super && approved?
   end
@@ -37,5 +47,14 @@ class User < ApplicationRecord
     else
       :not_approved
     end
+  end
+
+  private
+
+  def collect(hometasks, enumerator)
+    enumerator.each do |course|
+      hometasks << Hometask.for_course(course).last
+    end
+    hometasks
   end
 end
