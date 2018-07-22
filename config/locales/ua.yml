@@ -1,4 +1,9 @@
 ua:
+  actions:
+    success:
+      create: "%{resource} успішно створено."
+      update: "%{resource} успішно обновлено."
+      destroy: "%{resource} успішно видалено."
   title: 'Школа'
   news: 'Новини школи'
   topic: 'Розділ'
@@ -13,6 +18,7 @@ ua:
     teachers: 'Вчителі'
     about_us: 'Про нас'
     subjects: 'Предмети'
+    timetable: 'Розклад'
   subjects:
     algebra: 'Алгебра'
     art: 'Мистецтво'
@@ -48,6 +54,12 @@ ua:
     world_history: 'Всесвітня історія'
     world_literature: 'Зарубіжна література'
     writing: 'Писання'
+  days:
+    monday: Понеділок
+    tuesday: Вівторок
+    wednesday: Середа
+    thursday: Четверг
+    friday: П'ятниця
   activerecord:
     models:
       achievement:
@@ -74,6 +86,7 @@ ua:
       subject:
         one:  Предмет
         other: Предмети
+      timetable: Розклад
       theme:
         one:  Тема
         other: Теми
