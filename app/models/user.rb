@@ -64,11 +64,10 @@ class User < ApplicationRecord
     end
     hometasks
   end
-
-  def collect_all(hometasks, enumerator)
-    enumerator.each do |course|
-      hometasks << Hometask.for_course(course)
-    end
-    hometasks
-  end
+  # def collect_all(hometasks, enumerator)
+  #   enumerator.each do |course|
+  #     hometasks << Hometask.for_course(course)
+  #   end
+  #   hometasks
+  # end
 end
