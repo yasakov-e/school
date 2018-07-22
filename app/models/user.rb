@@ -30,14 +30,18 @@ class User < ApplicationRecord
 
   enum role: ROLES
 
-  def hometasks
+  def hometasks(collect_option)
     hometasks = []
     if student?
-      hometasks = collect(hometasks, group.courses)
+      hometasks = send(collect_option, hometasks, group.courses)
     elsif teacher?
-      hometasks = collect(hometasks, courses)
+      hometasks = send(collect_option, hometasks, courses)
     end
     hometasks
+  end
+
+  def lessons
+    Lesson.for_courses(courses)
   end
 
   def active_for_authentication?
@@ -54,9 +58,16 @@ class User < ApplicationRecord
 
   private
 
-  def collect(hometasks, enumerator)
+  def collect_last(hometasks, enumerator)
     enumerator.each do |course|
       hometasks << Hometask.for_course(course).last
+    end
+    hometasks
+  end
+
+  def collect_all(hometasks, enumerator)
+    enumerator.each do |course|
+      hometasks << Hometask.for_course(course)
     end
     hometasks
   end
