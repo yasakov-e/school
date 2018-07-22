@@ -66,6 +66,8 @@ ua:
       hometask:
         one:  Домашнє завдання
         other: Домашні завдання
+        new: Нове домашнє завдання
+        edit: Редагування домашнього завдання
       lesson:
         one:  Урок
         other: Уроки
@@ -128,7 +130,7 @@ ua:
       hometask:
         description: Опис
         link: Посилання
-        lesson: Урок
+        lesson_id: Урок
         created_at: Створено
         updated_at: Змінено
       lesson:
@@ -483,3 +485,7 @@ ua:
         col_sep: "Роздільник стовпців"
         col_sep_help: "Залишити пустим по замовчуванню ('%{value}')" # value is default_col_sep
 # end rails_admin locale
+  helpers:
+    submit:
+      create: "Створити %{model}"
+      update: "Оновити %{model}"

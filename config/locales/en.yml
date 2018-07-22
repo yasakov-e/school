@@ -80,6 +80,8 @@ en:
       hometask:
         one:  Hometask
         other: Hometasks
+        new: New hometask
+        edit: Edit hometask
       lesson:
         one:  Lesson
         other: Lessons
