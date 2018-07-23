@@ -37,7 +37,7 @@ class LessonsController < ApplicationController
                           resource: lesson_locale)
   end
 
-private
+  private
 
   def lesson
     @lesson = Lesson.find(params[:id])
