@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class LessonsController < ApplicationController
+  before_action :check_access
   def new
     @lesson = Lesson.new
   end
@@ -49,5 +50,9 @@ class LessonsController < ApplicationController
 
   def lesson_locale
     t('activerecord.models.lesson.one')
+  end
+
+  def check_access
+    redirect_to root_path unless current_user.teacher?
   end
 end
