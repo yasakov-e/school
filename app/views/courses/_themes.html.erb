@@ -14,13 +14,14 @@
         <%= "#{theme.topic}" %>
       </td>
       <% if current_user.teacher? %>
-        <td> 
+        <td>
           <a href=<%= edit_theme_path theme.id %> >
-            <%= "Edit" %>
+            <%= t('activerecord.models.theme.edit') %>
           </a>
+          <%= link_to t('activerecord.models.lesson.add'), new_lesson_path(theme_id: theme.id) %>
         </td>
       <% end %>
     </tr>
   </tbody>
   <% end %>
-</table> 
+</table>
