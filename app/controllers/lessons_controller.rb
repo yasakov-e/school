@@ -22,7 +22,7 @@ class LessonsController < ApplicationController
   end
 
   def update
-    if @lesson.update(lesson_params)
+    if lesson.update(lesson_params)
       redirect_to course_path(id: @lesson.theme.course_id),
                   notice: t('actions.success.update',
                             resource: lesson_locale)
