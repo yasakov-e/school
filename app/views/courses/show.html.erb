@@ -29,6 +29,8 @@
 
 <%= link_to t('activerecord.models.theme.new'), new_theme_path if current_user.teacher? %>
 <%= link_to t('activerecord.models.lesson.new'), new_lesson_path if current_user.teacher? %>
+
+<%= render 'students' %>
 <%= render 'themes' %>
 <%= render 'lessons' %>
 <%= link_to t(:back), groups_path unless current_user.student? %>
