@@ -27,10 +27,10 @@
   </tbody>
 </table>
 
+<%= link_to t('activerecord.models.theme.new'), new_theme_path if current_user.teacher? %>
+<%= link_to t('activerecord.models.lesson.new'), new_lesson_path if current_user.teacher? %>
+
 <%= render 'students' %>
-
-<%= link_to "New Theme", new_theme_path if current_user.teacher? %>
-
 <%= render 'themes' %>
-
-<%= link_to 'Back', groups_path unless current_user.student? %>
+<%= render 'lessons' %>
+<%= link_to t(:back), groups_path unless current_user.student? %>

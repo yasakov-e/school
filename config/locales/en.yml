@@ -87,9 +87,13 @@ en:
         other: Hometasks
         new: New hometask
         edit: Edit hometask
+        add: Add hometask
       lesson:
         one:  Lesson
         other: Lessons
+        new: New lesson
+        edit: Edit lesson
+        add: Add lesson
       subject:
         one:  subject
         other: Subjects
@@ -100,6 +104,7 @@ en:
       theme:
         one:  Theme
         other: Themes
+        new: New theme
       user:
         one:  User
         other: Users
