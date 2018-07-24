@@ -17,15 +17,17 @@
           <%= "#{@course.group.number}-#{@course.group.parallel}" %>
         </a>
       </td>
-      <td> 
-        <%= t("subjects.#{@course.subject.name}") %>  
+      <td>
+        <%= t("subjects.#{@course.subject.name}") %>
       </td>
-      <td> 
-        <%= "#{@course.user.name} #{@course.user.surname}" %> 
+      <td>
+        <%= "#{@course.user.name} #{@course.user.surname}" %>
       </td>
     </tr>
   </tbody>
 </table>
+
+<%= render 'students' %>
 
 <%= link_to "New Theme", new_theme_path if current_user.teacher? %>
 
