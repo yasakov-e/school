@@ -1,6 +1,9 @@
 // Place all the styles related to the Courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Index page
+
 .course-section {
   width: 100%;
   margin: 30px 0;
@@ -32,4 +35,113 @@
   font-weight: bold;
   text-align: center;
   margin: 20px 0 40px;
+}
+
+// ----------------------------------------------
+// Course show
+
+.course-header {
+  height: 60px;
+  width: 100%;
+  background-color: rgba(4, 196, 244, 0.1);
+  margin: 20px 0 30px;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 22px;
+}
+
+// journal
+
+.table-scroll {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #dddddd;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow: auto;
+}
+
+.table-scroll table {
+  width: 100%;
+  margin: auto;
+}
+
+.table-scroll th, .table-scroll td {
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.clone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.clone td, .clone th {
+  visibility: hidden;
+  border-color: transparent;
+}
+
+.clone tbody th {
+  visibility: visible;
+}
+
+.clone .fixed {
+  background: #ffffff;
+  visibility: visible;
+  border: 1px solid #dddddd;
+}
+
+.clone thead, .clone tfoot {
+  background: transparent;
+}
+
+.table-bordered > thead > tr > th, .table-bordered > thead > tr > td {
+  border-bottom: 1px solid #dddddd;
+}
+
+.journal-thead > tr > th {
+  text-align: center;
+}
+
+.journal-thead > tr > .topic {
+  text-align: right;
+}
+
+.plus-link > img {
+  width: 25px;
+  height: 25px;
+}
+
+.student-name {
+  min-width: 150px;
+}
+
+.points, .attendance, .plus-item {
+  min-width: 50px;
+}
+
+// achievements bg-colors
+.student-row {
+  .normal {
+    background-color: rgba(4, 196, 244, 0.2);
+  }
+  .notebook {
+    background-color: rgba(244, 236, 12, 0.2);
+  }
+  .thematic {
+    background-color: rgba(33, 244, 19, 0.2);
+  }
+  .semester {
+    background-color: rgba(244, 15, 10, 0.2);
+  }
+  .year {
+    background-color: rgba(16, 35, 244, 0.2);
+  }
+  .false {
+    background-color: rgba(244, 26, 13, 0.2);
+  }
 }
