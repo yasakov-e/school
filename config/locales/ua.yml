@@ -67,6 +67,9 @@ ua:
       achievement:
         one:  Успішність
         other: Успішності
+        new: Нова успішність
+        edit: Редагування успішності
+        add: Додати успішність
       admin: Адміністратор
       article:
         one:  Стаття
@@ -114,6 +117,12 @@ ua:
         user: Студент
         created_at: Створено
         updated_at: Змінено
+        kinds:
+          normal: "Звичайна"
+          notebook: "В щоденнику"
+          thematic: "Тематична"
+          semester: "Семестрова"
+          year: "Річна"
       admin:
         confirmed_at: "Підтверджено"
         created_at: "Створено"
@@ -154,6 +163,7 @@ ua:
       hometask:
         description: Опис
         link: Посилання
+        lesson: Урок
         lesson_id: Урок
         created_at: Створено
         updated_at: Змінено
@@ -201,6 +211,23 @@ ua:
         unlock_token: "Токен розблокування"
         updated_at: "Змінений"
         signed_up_but_not_approved: 'Ви успішно зареєструвалися, але ваш обліковий запис ще не схвалено адміністратором'
+    errors:
+      models:
+        theme:
+          attributes:
+            topic:
+              blank: 'не може бути пустою'
+              too_short: 'надто коротка'
+        hometask:
+          attributes:
+            description:
+              blank: 'не може бути пустою'
+              too_short: 'надто коротка'
+        lesson:
+          attributes:
+            topic:
+              blank: 'не може бути пустим'
+              too_short: 'надто короткий'
   devise:
     confirmations:
       confirmed: "Ваш обліковий запис підтверджено. Ви увійшли в систему."
@@ -211,7 +238,7 @@ ua:
     failure:
       already_authenticated: "Ви вже увійшли в систему."
       inactive: "Ваш обліковий запис ще не активовано."
-      invalid: "Некоректий %{authentication_keys} або пароль."
+      invalid: "Некоректний %{authentication_keys} або пароль."
       last_attempt: "У вас залишилась ще одна спроба перед блокуванням облікового запису."
       locked: "Ваш обліковий запис заблоковано."
       not_found_in_database: "Некоректий %{authentication_keys} або пароль."
@@ -287,6 +314,7 @@ ua:
       already_signed_out: "Успішний вихід з системи."
       new:
         sign_in: "Увійти"
+        remember_me: "Запам'ятати мене"
       signed_in: "Ви увійшли в систему."
       signed_out: "Успішний вихід з системи."
     shared:
